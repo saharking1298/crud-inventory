@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <style>
+        a{margin-left: 5px;}
+    </style>
+</head>
+<body>
+    <h1>View Inventory Contents</h1>
+    <ul>
+        <% for(item of inventory) { %>
+            <li>
+                <span style="color:orange;"> <%= item.item %> </span>
+                <span style="color:red;"> x <%= item.qty %> </span>
+                <a href="/inventory/<%= item.id %>"> View </a>
+                <a href="/inventory/<%= item.id %>/edit"> Edit </a>
+                <a href="javascript:fetchDelete('/inventory/<%= item.id %>');"> Remove </a>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/inventory/new"> Create a new item </a>
+
+    <script src="js/Utils.js"></script>
+</body>
+</html>

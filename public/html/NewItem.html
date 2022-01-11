@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an item</title>
+</head>
+<body>
+    <h1> Create an item </h1>
+    <form action="/inventory" method="POST">
+        <label for="item"> Item name: </label>
+        <input type="text" name="item" id="item">
+
+        <label for="qty"> Item quantity: </label>
+        <input type="number" name="qty" id="qty">
+        <br>
+        <button> Create a new item! </button>
+    </form>
+    <a href="/inventory"> Back to inventory </a>
+</body>
+</html>

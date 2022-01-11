@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an item</title>
+</head>
+<body>
+    <h1> Edit an item </h1>
+    <form action="/inventory/<%= item.id %>?_method=PATCH" method="POST">
+        <label for="item"> Item name: </label>
+        <input type="text" name="item" id="item" value="<%= item.item %>">
+
+        <label for="qty"> Item quantity: </label>
+        <input type="number" name="qty" id="qty" value="<%= item.qty %>">
+        <br>
+        <button> Confirm changes </button>
+    </form>
+    <a href="/inventory"> Back to inventory </a>
+</body>
+</html>
